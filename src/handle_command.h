@@ -21,6 +21,7 @@ int handle_command(int command_id, int argc, char **argv)
 	}
 	if (command_id == 2){
 		FILE *comp = fopen(".bob/compiler_flags", "w");
+		fputs("gcc ", comp);
 		for (int i = 2; i < argc; i++){
 			fputs(argv[i], comp);
 			fputc(' ', comp);
