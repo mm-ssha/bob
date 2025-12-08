@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include "f.h"
+#include "func.h"
 int main()
 {
-	f();
-	printf("Yolanda!\n");
+	fn();
+	printf("Yolanda baby!\n");
 	return 0;
 }
