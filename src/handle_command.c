@@ -1,12 +1,7 @@
-#ifndef BOB_SRC_HANDLE_COMMAND_H
-#define BOB_SRC_HANDLE_COMMAND_H
-
 #include <stdio.h>
 #include <stdlib.h>
-#include "format_compare.h"
-#include "compile_objects.h"
 
-#define MAX_RUN_COMMAND_LENGTH 150
+#include "bob.h"
 
 int handle_command(int command_id, int argc, char **argv)
 {
@@ -56,5 +51,3 @@ int handle_command(int command_id, int argc, char **argv)
 	}
 	return 0;
 }
-
-#endif

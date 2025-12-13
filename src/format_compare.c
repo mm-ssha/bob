@@ -1,10 +1,7 @@
-#ifndef BOB_SRC_FORMAT_COMPARE_H
-#define BOB_SRC_FORMAT_COMPARE_H
+#include <stdio.h>
+#include <stdlib.h>
 
-#include "equal_strings.h"
-
-#define MAX_FILES 500
-#define MAX_LINE_LENGTH 250
+#include "bob.h"
 
 int format_compare()
 {
@@ -85,5 +82,3 @@ int format_compare()
 	fclose(time);
 	return 0;
 }
-
-#endif

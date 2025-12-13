@@ -1,10 +1,11 @@
-#include "determine_command.h"
-#include "handle_command.h"
+#include <stdio.h>
+
+#include "bob.h"
 
 int main(int argc, char **argv)
 {
-	if (argc < 2){
-		printf("Specify call type.\n");
+	if (argc != 2){
+		printf("Specify only call type.\n");
 		return 1;
 	}
 	int command_id = determine_command(argv[1]);

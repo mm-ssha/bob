@@ -1,5 +1,4 @@
-#ifndef BOB_SRC_EQUAL_STRINGS_H
-#define BOB_SRC_EQUAL_STRINGS_H
+#include "bob.h"
 
 int equal_strings(char *s1, char *s2)
 {
@@ -11,5 +10,3 @@ int equal_strings(char *s1, char *s2)
 	if (*s1 != '\0' || *s2 != '\0') return 0;
 	return 1;
 }
-
-#endif

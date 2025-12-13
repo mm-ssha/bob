@@ -1,13 +1,8 @@
-#ifndef BOB_SRC_COMPILE_OBJECTS_H
-#define BOB_SRC_COMPILE_OBJECTS_H
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
-#define MAX_LINE_LENGTH 250
-#define MAX_COMPILE_TO_OBJECTS_LENGTH 25000
-#define MAX_COMPILE_EXECUTABLE_LENGTH 30000
+#include "bob.h"
 
 int compile_objects()
 {
@@ -72,5 +67,3 @@ int compile_objects()
 	fclose(fl);
 	return 0;
 }
-
-#endif
