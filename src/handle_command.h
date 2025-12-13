@@ -6,6 +6,8 @@
 #include "format_compare.h"
 #include "compile_objects.h"
 
+#define MAX_RUN_COMMAND_LENGTH 150
+
 int handle_command(int command_id, int argc, char **argv)
 {
 	if (command_id == 0){
@@ -39,7 +41,18 @@ int handle_command(int command_id, int argc, char **argv)
 		compile_objects();
 	}
 	if (command_id == 4){
-		system("./.bob/bob_executable");
+		char cmd[MAX_RUN_COMMAND_LENGTH] = {"./.bob/bob_executable "};
+
+		int cmd_pos = 22;
+		for (int i = 2; i < argc; i++){
+			int pos = 0;
+			while (argv[i][pos] != '\0'){
+				cmd[cmd_pos++] = argv[i][pos++];
+			}
+			cmd[cmd_pos++] = ' ';
+		}
+
+		system(cmd);
 	}
 	return 0;
 }
